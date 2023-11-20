@@ -1,0 +1,52 @@
+@import "../variables.css";
+
+.nav {
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-toggle, .btn-close {
+    display: flex;
+    cursor: pointer;
+}
+.nav-logo {
+    color: var(--color-title);
+    font-weight: var(--font-medium);
+    font-size: var(--h2-fs);
+}
+@media screen and (max-width: 1023px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: hsla(224, 17%, 36%, .5);
+        width: 75%;
+        height: 100%;
+        padding: 4rem 0 0 3.5rem;
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        transition: right .4s;
+    }
+}
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+.nav-link {
+    color: var(--color-title);
+    font-weight: var(--font-medium);
+    transition: color .4s;
+}
+.nav-link:hover {
+    color: var(--color-alt);
+}
+.btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+.show-menu {
+    right: 0;
+}
